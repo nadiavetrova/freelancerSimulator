@@ -258,27 +258,25 @@ function characterSelectionInit() {
 characterSelectionInit();
 
 
+
 function informationsInit() {
-  const instructionsBTN = document.querySelector('.instructionsBTN')
-  const instructionsText = document.querySelector('.instructionsText')
+  const instructionsBTN = document.querySelector('.instructionsBTN');
+  const instructionsText = document.querySelector('.instructionsText');
+  const character = document.querySelector('.character');
 
   const texts = [
     `Панель характеристик: <br>
 💰 Деньги — зарабатываешь на жизнь. <br>
-
 ⚡ Энергия — без неё не поработаешь. Следи за уровнем! <br>
-
 📈 Опыт — с каждым заказом ты становишься круче. <br>
-
 ⏳ День X — показывает, сколько дней ты уже фрилансишь.`,
-
     `🎯 Что дальше? <br>
 Набери опыта, энергии и денег — и переходи к новым уровням: <br>
 Учись <br>
 Прокачивай скиллы <br>
 Получай крутые отзывы <br>
 Стань профи!`,
-    ``
+    `` // последний шаг, пустой текст
   ];
 
   let current = 0;
@@ -289,6 +287,15 @@ function informationsInit() {
 
       if (current === texts.length) {
         this.textContent = 'Начать!';
+        // Показываем персонажа
+        if (character) {
+          if (localStorage.getItem('selectedCharacter') === 'girl') {
+            character.src = 'img/girl_1.png';
+          } else {
+            character.src = 'img/boy_1.png';
+          }
+          character.style.display = 'block';
+        }
       }
     }
   });

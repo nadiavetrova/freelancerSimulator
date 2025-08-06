@@ -346,7 +346,7 @@
  }
 
  .characteristics_box {
-   margin: 50px 0 50px 0;
+   margin: 50px 0 250px 0;
  }
 
  .characteristicsList {
@@ -389,6 +389,11 @@
    font-size: 1vw;
  }
 
+ .character {
+   display: none;
+   width: 50px;
+   height: 150px;
+ }
 
 
 
@@ -490,5 +495,15 @@
    #skipBtn {
      padding: 2px 5px;
      font-size: 2vw;
+   }
+ }
+
+ @media (max-width: 391px) {
+   .characteristics_box {
+     margin: 50px 0 100px 0;
+   }
+
+   .desk {
+     transform: translate(94%, 95%);
    }
  }
