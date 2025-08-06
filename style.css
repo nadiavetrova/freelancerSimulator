@@ -8,6 +8,8 @@
    text-transform: uppercase;
  }
 
+
+ .instructionsSection_box,
  .secondSlide,
  .firstSlide,
  .lastSlide,
@@ -33,6 +35,11 @@
  .lastSlide {
    background-image: url('./img/forest.png');
  }
+
+ .instructionsSection_box {
+   background-image: url('./img/instructionsSection_01.jpg');
+ }
+
 
  .secondSlide,
  .lastSlide {
@@ -216,9 +223,9 @@
    flex-wrap: nowrap;
    justify-content: start;
    align-items: center;
-   gap: 50px;
+   gap: 150px;
    width: 100%;
-   margin-top: 450px;
+   margin-top: 350px;
  }
 
  .girlImg {
@@ -324,6 +331,51 @@
  .instructionsSection_box {
    display: none;
  }
+
+ .instructionsWrp {
+   display: grid;
+   grid-template-columns: 40% 60%;
+   grid-template-rows: auto;
+   gap: 20px;
+   align-items: end;
+ }
+
+ .instructionsText {
+   border-radius: 25px;
+   background: #4d4718;
+   padding: 30px 30px;
+   color: #f5d19a;
+   font-weight: 600;
+ }
+
+ .characteristics_box {
+   margin: 50px 0 500px 0;
+ }
+
+ .characteristicsList {
+   padding: 10px 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   background-color: #796f05;
+   color: #f5d19a;
+   font-weight: bold;
+   font-size: 19px;
+   border-radius: 25px;
+   box-shadow: 0 2px 16px 0 rgb(47 15 1 / 75%);
+   list-style: none;
+ }
+
+
+
+
+
+
+
+
+
+
+
 
  .freelanceWorkspace {
    display: flex;

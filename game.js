@@ -192,67 +192,106 @@ function characterSelectionInit() {
 
 
 
-  const orders = [
-    { text: "Сделать лендинг — 100$", money: 100, energy: -10, xp: 5 },
-    { text: "Правки на сайте — 50$", money: 50, energy: -5, xp: 3 },
-    { text: "Добавить форму обратной связи — 30$", money: 30, energy: -3, xp: 2 }
-  ];
+  // const orders = [
+  //   { text: "Сделать лендинг — 100$", money: 100, energy: -10, xp: 5 },
+  //   { text: "Правки на сайте — 50$", money: 50, energy: -5, xp: 3 },
+  //   { text: "Добавить форму обратной связи — 30$", money: 30, energy: -3, xp: 2 }
+  // ];
 
-  let currentIndex = 0;
-  let money = 0;
-  let energy = 100;
-  let xp = 0;
+  // let currentIndex = 0;
+  // let money = 0;
+  // let energy = 100;
+  // let xp = 0;
 
-  const orderText = document.getElementById('currentOrder');
-  const acceptBtn = document.getElementById('acceptBtn');
-  const skipBtn = document.getElementById('skipBtn');
-  const progressBar = document.getElementById('progressBar');
-  const progress = document.querySelector('.progress');
-  const moneyDisplay = document.getElementById('money');
-  const energyDisplay = document.getElementById('energy');
-  const xpDisplay = document.getElementById('xp');
+  // const orderText = document.getElementById('currentOrder');
+  // const acceptBtn = document.getElementById('acceptBtn');
+  // const skipBtn = document.getElementById('skipBtn');
+  // const progressBar = document.getElementById('progressBar');
+  // const progress = document.querySelector('.progress');
+  // const moneyDisplay = document.getElementById('money');
+  // const energyDisplay = document.getElementById('energy');
+  // const xpDisplay = document.getElementById('xp');
 
-  function loadOrder() {
-    if (currentIndex < orders.length) {
-      orderText.textContent = orders[currentIndex].text;
-    } else {
-      orderText.textContent = "Заказы закончились!";
-      acceptBtn.disabled = true;
-      skipBtn.disabled = true;
-    }
-  }
+  // function loadOrder() {
+  //   if (currentIndex < orders.length) {
+  //     orderText.textContent = orders[currentIndex].text;
+  //   } else {
+  //     orderText.textContent = "Заказы закончились!";
+  //     acceptBtn.disabled = true;
+  //     skipBtn.disabled = true;
+  //   }
+  // }
 
-  acceptBtn.addEventListener('click', () => {
-    progressBar.classList.remove('hidden');
-    progress.style.width = '0%';
+  // acceptBtn.addEventListener('click', () => {
+  //   progressBar.classList.remove('hidden');
+  //   progress.style.width = '0%';
 
-    setTimeout(() => {
-      progress.style.width = '100%';
-    }, 10);
+  //   setTimeout(() => {
+  //     progress.style.width = '100%';
+  //   }, 10);
 
-    setTimeout(() => {
-      const order = orders[currentIndex];
-      money += order.money;
-      energy += order.energy;
-      xp += order.xp;
+  //   setTimeout(() => {
+  //     const order = orders[currentIndex];
+  //     money += order.money;
+  //     energy += order.energy;
+  //     xp += order.xp;
 
-      moneyDisplay.textContent = money;
-      energyDisplay.textContent = energy + '%';
-      xpDisplay.textContent = xp + '%';
+  //     moneyDisplay.textContent = money;
+  //     energyDisplay.textContent = energy + '%';
+  //     xpDisplay.textContent = xp + '%';
 
-      currentIndex++;
-      progressBar.classList.add('hidden');
-      loadOrder();
-    }, 2000);
-  });
+  //     currentIndex++;
+  //     progressBar.classList.add('hidden');
+  //     loadOrder();
+  //   }, 2000);
+  // });
 
-  skipBtn.addEventListener('click', () => {
-    currentIndex++;
-    loadOrder();
-  });
+  // skipBtn.addEventListener('click', () => {
+  //   currentIndex++;
+  //   loadOrder();
+  // });
 
-  loadOrder();
+  // loadOrder();
 
 }
 
 characterSelectionInit();
+
+
+function informationsInit() {
+  const instructionsBTN = document.querySelector('.instructionsBTN')
+  const instructionsText = document.querySelector('.instructionsText')
+
+  const texts = [
+    `Панель характеристик: <br>
+💰 Деньги — зарабатываешь на жизнь. <br>
+
+⚡ Энергия — без неё не поработаешь. Следи за уровнем! <br>
+
+📈 Опыт — с каждым заказом ты становишься круче. <br>
+
+⏳ День X — показывает, сколько дней ты уже фрилансишь.`,
+
+    `🎯 Что дальше? <br>
+Набери опыта, энергии и денег — и переходи к новым уровням: <br>
+Учись <br>
+Прокачивай скиллы <br>
+Получай крутые отзывы <br>
+Стань профи!`,
+    ``
+  ];
+
+  let current = 0;
+  instructionsBTN.addEventListener('click', function () {
+    if (current < texts.length) {
+      instructionsText.innerHTML = texts[current];
+      current++;
+
+      if (current === texts.length) {
+        this.textContent = 'Начать!';
+      }
+    }
+  });
+}
+
+informationsInit();
