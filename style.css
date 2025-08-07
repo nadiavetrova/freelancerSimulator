@@ -331,22 +331,31 @@
 
  .instructionsWrp {
    display: grid;
-   grid-template-columns: 40% 60%;
+   grid-template-columns: 60% 40%;
    grid-template-rows: auto;
    gap: 20px;
    align-items: end;
  }
 
  .instructionsText {
-   border-radius: 25px;
    background: #4d4718;
    padding: 30px 30px;
+   border-radius: 25px;
    color: #f5d19a;
    font-weight: 600;
  }
 
+ .characterIMG_box {}
+
+ .activeCharacter {
+   background: #4d4718b0;
+   border-radius: 25px;
+   padding: 30px 30px;
+   margin-bottom: 20px;
+ }
+
  .characteristics_box {
-   margin: 50px 0 250px 0;
+   margin: 50px 0 150px 0
  }
 
  .characteristicsList {
@@ -368,10 +377,11 @@
  }
 
  .desk {
+   display: none;
    position: absolute;
-   top: 0;
-   left: 0;
-   transform: translate(85%, 90%);
+   top: 50%;
+   left: 50%;
+   transform: translate(-60%, -150%);
    font-family: 'Courier New', monospace;
  }
 
@@ -391,8 +401,8 @@
 
  .character {
    display: none;
-   width: 50px;
-   height: 150px;
+   width: 170px;
+   height: 250px;
  }
 
 
@@ -504,6 +514,6 @@
    }
 
    .desk {
-     transform: translate(94%, 95%);
+     transform: translate(-60%, -110%);
    }
  }

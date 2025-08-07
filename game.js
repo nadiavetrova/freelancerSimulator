@@ -263,6 +263,9 @@ function informationsInit() {
   const instructionsBTN = document.querySelector('.instructionsBTN');
   const instructionsText = document.querySelector('.instructionsText');
   const character = document.querySelector('.character');
+  const characterIMG_box = document.querySelector('.characterIMG_box');
+  const desk = document.querySelector('.desk');
+
 
   const texts = [
     `Панель характеристик: <br>
@@ -287,14 +290,18 @@ function informationsInit() {
 
       if (current === texts.length) {
         this.textContent = 'Начать!';
+        instructionsText.style.display = 'none';
         // Показываем персонажа
         if (character) {
           if (localStorage.getItem('selectedCharacter') === 'girl') {
-            character.src = 'img/girl_1.png';
+            character.src = 'img/girlMain.png';
           } else {
-            character.src = 'img/boy_1.png';
+            character.src = 'img/boyMain.png';
           }
-          character.style.display = 'block';
+          character.style.display = 'flex';
+          characterIMG_box.classList.add('activeCharacter');
+          desk.style.display = 'block';
+          this.style.display = 'none';
         }
       }
     }
