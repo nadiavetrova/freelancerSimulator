@@ -83,6 +83,11 @@
               <h2 class="title secondTitle">
                 Выбирете игрока:
               </h2>
+              <div class="characterSlideBTN_box">
+                <button class="characterSlideBTN btnMain uppercase">
+                  Продолжить
+                </button>
+              </div>
             </div>
 
             <div id="playerPhrase" class="phrase-bubble hidden"></div>
@@ -92,11 +97,6 @@
             <div class="girl">
               <img class="girlImg" src="img/girl_1.png" alt="girl" id="girl">
             </div>
-          </div>
-          <div class="characterSlideBTN_box">
-            <button class="characterSlideBTN btnMain uppercase">
-              Продолжить
-            </button>
           </div>
         </div>
       </div>
@@ -111,16 +111,16 @@
             <div class="characteristics_box">
               <ul class="characteristicsList">
                 <li class="characteristicsItem">
-                  💰 Деньги: <span></span>
+                  💰 Деньги: <span id="money">0</span>
                 </li>
                 <li class="characteristicsItem">
-                  ⚡ Энергия: <span></span>
+                  ⚡ Энергия: <span id="energy">100%</span>
                 </li>
                 <li class="characteristicsItem">
-                  📈 Опыт: <span></span>
+                  📈 Опыт: <span id="xp">0%</span>
                 </li>
                 <li class="characteristicsItem">
-                  ⏳ День: <span></span>
+                  ⏳ День: <span>1</span>
                 </li>
               </ul>
             </div>
@@ -136,6 +136,9 @@
                   </div>
                   <div id="progressBar" class="hidden">
                     <div class="progress"></div>
+                  </div>
+                  <div class="video_box">
+                    <video id="video" class="img-fluid" src="video/cat.mp4" controls></video>
                   </div>
                 </div>
 
@@ -158,6 +161,50 @@
                   <button class="instructionsBTN btnMain uppercase">
                     Продолжить
                   </button>
+                </div>
+
+                <div class="lastMessege">
+                  <h1 class="lastTitle">
+                    Спасибо, что познакомились с демо моего симулятора фрилансера!
+                  </h1>
+                  <p class="lastText">
+                    В этом фрагменте реализовано:
+                  </p>
+                  <ul class="lastList">
+                    <li class="lastItem">
+                      Пошаговая система слайдов — плавный переход между экранами с помощью display: none / flex и
+                      событий addEventListener.
+                    </li>
+                    <li class="lastItem">
+                      Валидация данных — проверка ввода имени с выводом ошибок.
+                    </li>
+                    <li class="lastItem">
+                      Выбор персонажа с сохранением в localStorage и динамической сменой реплик.
+                    </li>
+                    <li class="lastItem">
+                      Интерактивные инструкции — последовательный показ текста с кнопкой "Дальше".
+                    </li>
+                    <li class="lastItem">
+                      Система заказов — деньги, энергия и опыт пересчитываются и отображаются в реальном времени.
+                    </li>
+                    <li class="lastItem">
+                      Прогресс-бар выполнения задач с анимацией ширины.
+                    </li>
+                    <li class="lastItem">
+                      Обработка состояния персонажа — смена изображений в зависимости от энергии.
+                    </li>
+                    <li class="lastItem">
+                      Мини-видеовставки при выполнении задания и скрытие видеовставки при ее окончании.
+                    </li>
+                    <li class="lastItem">
+                      Адаптивная верстка с блоками, картинками и элементами UI, которые показываются и скрываются по
+                      ходу игры.
+                    </li>
+                    <li class="lastItem">
+                      📜 Всё это — на чистом JavaScript + HTML/CSS с упором на простоту, читаемость и живость
+                      интерфейса.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
