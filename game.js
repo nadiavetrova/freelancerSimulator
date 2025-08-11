@@ -163,13 +163,8 @@ function informationsInit() {
       }
     }
   });
-}
-
-informationsInit();
 
 
-
-function orderInit() {
 
   const orders = [
     { text: "Выберите заказ", money: 0, energy: 0, xp: 0 },
@@ -267,4 +262,4 @@ function orderInit() {
   loadOrder();
 }
 
-orderInit()
+informationsInit();

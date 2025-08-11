@@ -353,7 +353,7 @@
  }
 
  .characteristics_box {
-   margin: 50px 0 150px 0
+   margin: 50px 0 100px 0;
  }
 
  .characteristicsList {
@@ -388,6 +388,7 @@
    font-weight: bold;
    color: #697375;
    font-size: 35px;
+   line-height: 26px;
  }
 
  #acceptBtn,
@@ -585,7 +586,7 @@
    }
 
    #currentOrder {
-     font-size: 21px;
+     font-size: 19px;
      line-height: 18px;
    }
 
@@ -610,7 +611,7 @@
 
  @media (max-width: 391px) {
    .characteristics_box {
-     margin: 50px 0 55px 0;
+     margin: 50px 0 33px 0;
    }
 
    .desk {
